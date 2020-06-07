@@ -1,0 +1,45 @@
+html{
+    box-sizing: border-box;
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+    
+}
+body{
+    overflow-x: hidden;
+    position: relative;
+    min-width: 320px
+}
+a{
+    display: inline-block;
+    outline: none;
+    text-decoration: none;   
+    color: #fff; 
+}
+ul,
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html, body{
+    height: 100%;    
+}
+.container{
+    max-width: 1470px;
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    margin: 0 auto;
+}
+.container__aside{
+    max-width: 370px;
+    width: 100%;
+    min-height: 100%;
+}
+.container__wrap{
+    max-width: 1070px;
+    width: 100%;   
+    min-height: 100%; 
+}
