@@ -5,7 +5,8 @@ let gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    cssmin = require('gulp-cssmin');
+    cssmin = require('gulp-cssmin'),
+    ghPages = require('gulp-gh-pages');
 
 gulp.task('sass', function () {
     return gulp.src('app/scss/**/*.scss')
@@ -67,3 +68,11 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', gulp.parallel('sass', 'watch', 'browser-sync', 'script', 'style'));
+
+
+
+
+gulp.task('deploy', function() {
+  return gulp.src('./app/**/*')
+    .pipe(ghPages());
+});

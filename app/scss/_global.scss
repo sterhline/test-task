@@ -26,10 +26,14 @@ li{
 html, body{
     height: 100%;    
 }
+*:focus {
+    outline-style: none;
+    outline-width: 0px !important;
+    outline-color: none !important;
+}
 .container{
     max-width: 1470px;
-    width: 100%;
-    
+    width: 100%;    
     display: flex;
     margin: 0 auto;
 }
